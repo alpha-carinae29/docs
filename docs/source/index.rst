@@ -3,7 +3,7 @@
    You can adapt this file completely to your liking, but it should at least
    contain the root `toctree` directive.
 
-Welcome to Neuralet Object Detection's Documentation!
+Welcome to Neuralet Edge Vision Engine Documentation!
 =====================================================
 This is the neuralet's object detection repository. With this module you can run object detection models on various edge devices and create an adaptive learning session to customize object detection models to your specific environment. for more information please visit our `website <https://neuralet.com/>`_.or reach out to hello@neuralet.com.
 
