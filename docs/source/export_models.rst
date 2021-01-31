@@ -1,7 +1,7 @@
 Export Models to Edge Devices
 =============================
 
-With Neuralet Edge Object Detection module you can easily export your trained model to Nvidia's Jetson Devices and Google Edge TPUs.
+With the Neuralet Edge Object Detection module, you can easily export your trained model to Nvidia's Jetson Devices and Google Edge TPUs.
 
 Compile tflite Models to Edge TPU Models
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -10,9 +10,9 @@ In amd64 with connected USB Accelerator docker container run: ::
 
     python3 exporters/edgetpu_exporter.py --tflite_file TFLITE_FILE --out_dir OUT_DIR
 
-Where :code:`TFLITE_FILE` should be a quantized model. You can use our adaptive learning API for training a quantized object detection model.
+Where :code:`TFLITE_FILE` should be a quantized model. You can use our Adaptive Learning API to train a quantized object detection model.
 
-For more information about quantization techniques of deep neural networks you can read our `blog <https://neuralet.com/article/quantization-of-tensorflow-object-detection-api-models/>`_.
+For more information about quantization techniques of deep neural networks, you can read our `blog <https://neuralet.com/article/quantization-of-tensorflow-object-detection-api-models/>`_.
 
 Export TensorFlow protobuf models to TRT engines
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^

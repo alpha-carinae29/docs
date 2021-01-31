@@ -5,7 +5,7 @@ You can run Object  Detection module on various platforms
 X86
 ^^^
 
-You should have website `Docker <https://docs.docker.com/get-docker/>`_ on your system. ::
+You should have `Docker <https://docs.docker.com/get-docker/>`_ on your system. ::
 
     # 1) Build Docker image
     docker build -f x86.Dockerfile -t "neuralet/object-detection:latest-x86_64_cpu" .

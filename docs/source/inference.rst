@@ -13,14 +13,14 @@ Where:
 
 :code:`INPUT_VIDEO` is the path to the input video file.
 
-:code:`OUT_DIR` is directory in which the output video file will be saved.
+:code:`OUT_DIR` is a directory in which the script will save the output video file.
 
-:code:`MODEL_PATH` is the path to the model file or directory. for :code:`x86` devices it should be a directory which contains the :code:`saved_model` directory. For :code:`edgetpu` it should be a compiled :code:`tflite` file, and for :code:`jetson` devices it should be a :code:`TRT Engine` file.
+:code:`MODEL_PATH` is the path to the model file or directory. For :code:`x86` devices, it should be a directory that contains the :code:`saved_model` directory. For :code:`edgetpu` it should be a compiled :code:`tflite` file, and for :code:`jetson` devices, it should be a :code:`TRT Engine` file.
 
 :code:`threshold` is the detector's threshold to detect objects.
 
-:code:`INPUT_WIDTH` and :code:`INPUT_HEIGHT` are width and height of the input of the model.
+:code:`INPUT_WIDTH` and :code:`INPUT_HEIGHT` are the width and height of the input of the model.
 
-:code:`OUT_WIDTH` and :code:`OUT_HEIGHT` are resolution of output video.
+:code:`OUT_WIDTH` and :code:`OUT_HEIGHT` are the resolutions of output video.
 
 
