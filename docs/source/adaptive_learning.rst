@@ -16,7 +16,7 @@ Run the docker container based on your device and the below commends inside the 
 
 Create an :code:`input.zip` file from the video file you want to feed to Adaptive Learning. ::
 
-    zip input.zip PATH_TO_VIDEO_FILE
+    zip -j input.zip PATH_TO_VIDEO_FILE
 
 **#Step 2:**
 
@@ -61,6 +61,20 @@ The expected status massages are as follows:
 Download the trained model whenever the job has been finished. ::
 
     python3 client.py download_file --job_id JOBID
+
+**What is inside :code:`output.zip` file?**
+
+:code:`train_outputs` : Contains all of the Adaptive Learning files.
+
+:code:`train_outputs/frozen_graph` : Contains all of required files for inference and exporting to the edge devices. Pass this directory to :code:`inference.py` in :code:`x86` devices for running inference on trained model.
+
+:code:`train_outputs/frozen_graph/frozen_inference_graph.pb` : When :code:`QuantizedModel` is :code:`false` in config file this file is inside frozen_graph directory. You can pass this file to the Jetson Exporter to create TensorRT engine.
+
+:code:`train_outputs/frozen_graph/detect.tflite` : When :code:`QuantizedModel` is :code:`true` in config file this file is inside frozen_graph directory. This is the qunatized :code:`tflite` file. You can pass it to EdgeTPU exporter to create an edgetpu compiled tflite file.
+
+:code:`event.out.tfevents` : This is the training log file of Adaptive Learning. You can open this file with :code:`tensorboard` and monitor training progress.
+
+
 
 Adaptive Learning Config File
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
