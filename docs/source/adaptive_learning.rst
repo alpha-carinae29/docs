@@ -43,7 +43,7 @@ Get a job status (enter the job id at JASKID) ::
 
 The expected status massages are as follows:
 
-.. csv-table:: a title
+.. csv-table:: Status Massages
     :header: "Parameter", "Comments"
     :widths: 10, 20
 
@@ -73,6 +73,8 @@ Download the trained model whenever the job has been finished. ::
 :code:`train_outputs/frozen_graph/detect.tflite` : When :code:`QuantizedModel` is :code:`true` in config file this file is inside frozen_graph directory. This is the qunatized :code:`tflite` file. You can pass it to EdgeTPU exporter to create an edgetpu compiled tflite file.
 
 :code:`event.out.tfevents` : This is the training log file of Adaptive Learning. You can open this file with :code:`tensorboard` and monitor training progress.
+
+:code:`label_map.pbtxt`: This is a :code:`pbtxt` file which maps the category names to corresponding indices in detector. For example if your detector predict :code:`3` as the object label, with the help of :code:`label_map.pbtxt` you can map this label to corresponding class. If you want to use our inference module you should pass this file to the script.
 
 
 
