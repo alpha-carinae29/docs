@@ -17,7 +17,7 @@ Where:
 
 :code:`MODEL_PATH` is the path to the model file or directory. For :code:`x86` devices, it should be a directory that contains the :code:`saved_model` directory. For :code:`edgetpu` it should be a compiled :code:`tflite` file, and for :code:`jetson` devices, it should be a :code:`TRT Engine` file.
 
-:code:`label_map` is a :code:`pbtxt` file which maps the category names to corresponding indices in detector. If you pass the :code:`model_path` you should pass this argument too. A sample to this file can be find in :code:`utils/mscoco_label_map.pbtxt` . If you use our Adaptive Learning service the model label map is exist in :code:`output.zip` file
+:code:`label_map` is a :code:`pbtxt` file which maps the category names to corresponding indices in detector. For example if your detector predict 3 as the object label, with the help of label_map.pbtxt you can map this label to corresponding class. If you pass the :code:`model_path` you should pass this argument too. A sample to this file can be find in :code:`utils/mscoco_label_map.pbtxt` . If you use our Adaptive Learning service the model label map is exist in :code:`output.zip` file
 
 :code:`threshold` is the detector's threshold to detect objects.
 
