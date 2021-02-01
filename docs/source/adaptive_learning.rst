@@ -40,6 +40,22 @@ Get a job status (enter the job id at JASKID) ::
 
     python3 client.py get_status --job_id JOBID
 
+
+The expected status massages are as follows:
+
+.. csv-table:: a title
+    :header: "Parameter", "Comments"
+    :widths: 10, 20
+
+    "Allocating Resource", "Allocating compute machine to your job"
+    "Building", "Building an environment to start a job"
+    "Training", "Running a Adaptive Learning Job"
+    "Wrapping Up", "Saving data and finishing the job"
+    "Finished", "The job has been finished. Note that it doesn't mean that the job has been finished successfully. it may finished with error"
+    "Failed", "There was a problem in Neuralet infrastructure"
+    "Not Reached Yet", "The job's workflow have not been reached to this stage yet"     
+    "Unexpected Error", "An internal error has occurred"
+
 **#Step 6:**
 
 Download the trained model whenever the job has been finished. ::
